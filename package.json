@@ -1,0 +1,19 @@
+{
+  "author": "Jesse R. Castro",
+  "name": "nightwatch-analytics",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aedile/nightwatch-analytics"
+  },
+  "scripts": {
+    "test": "npm run webdriver-update && npm run nightwatch",
+    "nightwatch": "./node_modules/nightwatch/bin/nightwatch",
+    "webdriver-update": "node_modules/webdriver-manager/bin/webdriver-manager update"
+  },
+  "devDependencies": {
+    "nightwatch": "^0.8.3",
+    "webdriver-manager": "^7.0.1"
+  }
+}
