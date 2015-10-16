@@ -1,5 +1,7 @@
 # nightwatch-analytics
-Use nightwatch.js to test analytics requests and data layer integrity. 
+Use nightwatch.js to test analytics requests and data layer integrity.
+
+This is a stock nightwatch install with an extra command and an extra assertion. The command will execute and return the results of `window.performance.getEntries()`.  The assertion calls this command and tests for a beacon string and allows optional matching of querystring parameters.  This effectively allows you to measure analytics requests.  Be sure to take into account wait/load times when using this assertion.
 
 ## Setup
 1. Clone this repo locally.
@@ -13,3 +15,10 @@ Use nightwatch.js to test analytics requests and data layer integrity.
 ## Webdriver Update
 1. Running `npm test` automatically updates webdrivers for easy sanity.
 2. You can run `npm run webdriver-update` to manually update webdrivers.
+
+## TODO
+1. Future iterations will implement a `waitForRequest` variant, which will perform the same comparison, but tied to a timeout to allow for processing.
+2. Replace rackspace.com-specific test with a generic test.
+
+
+
