@@ -33,7 +33,8 @@ exports.assertion = function(filter,params) {
    * @param result
    */
   this.pass = function(result) {
-    return result != 'no records found';
+    console.log(result);
+    return result != 'no matching records';
   };
 
   /**
